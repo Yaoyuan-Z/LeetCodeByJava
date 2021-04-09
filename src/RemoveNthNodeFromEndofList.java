@@ -31,3 +31,22 @@ public class RemoveNthNodeFromEndofList {
     }
 
 }
+
+
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode temp = new ListNode();
+        temp.next = head;
+        ListNode temp1 = temp;
+        ListNode temp2 = temp;
+        for(int i =0;i<=n;i++){
+            temp1 = temp1.next;
+        }
+        while(temp1!=null){
+            temp1 = temp1.next;
+            temp2 = temp2.next;
+        }
+        temp2.next = temp2.next.next;
+        return temp.next;
+    }
+}
