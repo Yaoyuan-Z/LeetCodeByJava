@@ -20,7 +20,7 @@ Given an integer, convert it to a roman numeral.
  */
 public class IntegerToRoman {
     public String intToRoman(int num){
-        if(num>399||num<1){
+        if(num>3999||num<1){
             return null;
         }
         String result ="";
